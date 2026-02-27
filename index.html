@@ -1346,7 +1346,7 @@
 
     // Purchase button
     document.getElementById('purchase-btn').addEventListener('click', function() {
-        const mailtoUrl = 'mailto:mosasabasaba@soundandcolor.dev?subject=I%20want%20to%20buy%20SalesGrok%20(Sales%20Edition)&body=Hi%20SalesGrok%20Team,%0A%0AI\'m%20ready%20to%20buy%20SalesGrok%20for%20Sales.%20Please%20send%20me%20payment%20instructions%20and%20API%20key%20setup%20guide.%0A%0AThanks!';
+        const mailtoUrl = 'mailto:mosasabasaba@soundandcolor.dev?subject=I%20want%20to%20buy%20SalesGrok%20&body=Hi%20SalesGrok%20Team,%0A%0AI\'m%20ready%20to%20buy%20SalesGrok.%20Please%20send%20me%20payment%20instructions%20and%20API%20key%20setup%20guide.%0A%0AThanks!';
         const newWindow = window.open(mailtoUrl, '_blank');
         if (!newWindow || newWindow.closed || typeof newWindow.closed === 'undefined') {
             window.location.href = mailtoUrl;
