@@ -724,7 +724,7 @@
                     
                     <div class="sales-quote" style="display: flex; align-items: center; gap: 20px;">
                         <div class="testimonial-avatar">
-                            <img src="img.jpg" alt="Sarah K.">
+                            <img src="assets/img.jpg" alt="Sarah K.">
                         </div>
                         <div style="flex: 1;">
                             <div style="font-style: italic; color: var(--text-dark); font-size: 16px; line-height: 1.6; margin-bottom: 12px;">
@@ -780,7 +780,7 @@
                         </div>
 
                         <div class="screenshot-container">
-                            <img src="demo.png" alt="ScholarFlux transformation showing original vs styled text" class="screenshot-image">
+                            <img src="assets/demo.png" alt="ScholarFlux transformation showing original vs styled text" class="screenshot-image">
                         </div>
 
                         <!-- Voice Matching Summary -->
@@ -822,7 +822,7 @@
 
                     <div class="feature-card">
                         <div class="feature-icon">
-                            <i class="fa-solid fa-arrows-spin"></i>
+                            <i class="fa-solid fa-rotate"></i>
                         </div>
                         <h4>Rewrite in Their Voice</h4>
                         <p>Write your draft normally, and we'll transform it to match your prospect's exact communication style — formal, casual, technical, or anything in between.</p>
@@ -893,7 +893,7 @@
             <!-- Pricing -->
             <div class="pricing-section">
                 <div class="pricing-card">
-                    <div class="pricing-badge d-flex align-items-center"><img src="cone.png" class="me-2">LAUNCH SPECIAL</div>
+                    <div class="pricing-badge d-flex align-items-center"><img src="assets/cone.png" class="me-2">LAUNCH SPECIAL</div>
                     <h3 style="font-size: 24px; color: var(--text-dark);">Sales Professional License</h3>
                     
                     <!-- Discount Display -->
@@ -936,7 +936,7 @@
                         </div>
                         
                         <p style="font-size: 13px; margin-top: 10px;">
-                            <i class="fa-regular fa-envelope"></i> After sending, email your confirmation to <strong>sales@scholarflux.com</strong> with your reference code — we'll send your download link within minutes!
+                            <i class="fa-regular fa-envelope"></i> After sending, email your confirmation to <strong>mosasabasaba@soundandcolor.dev</strong> with your reference code — we'll send your download link within minutes!
                         </p>
                     </div>
 
@@ -949,7 +949,7 @@
                         <i class="fa-regular fa-clock"></i> Launch pricing — price increases to $97 soon
                     </div>
 
-                    <button class="cta-button" onclick="window.location.href='mailto:sales@scholarflux.com?subject=I%20want%20to%20buy%20ScholarFlux%20(Sales%20Edition)&body=Hi%20ScholarFlux%20Team,%0A%0AI'm%20ready%20to%20buy%20ScholarFlux%20for%20Sales.%20Please%20send%20me%20payment%20instructions.%0A%0AReference%20code%20I'll%20use%3A%20SCH-SALES-%5BYour%20Name%5D%0A%0AThanks!'">
+                    <button class="cta-button" id="purchase-btn">
                         <i class="fa-regular fa-envelope"></i> Email to Purchase
                     </button>
                 </div>
@@ -1005,12 +1005,24 @@
             <div class="footer">
                 <p>© 2026 ScholarFlux — Built for sales professionals who want to close more deals</p>
                 <p style="margin-top: 10px; font-size: 12px;">
-                    <i class="fa-regular fa-envelope"></i> sales@scholarflux.com
+                    <i class="fa-regular fa-envelope"></i> mosasabasaba@soundandcolor.dev
                 </p>
             </div>
         </div>
     </div>
 
     <script src="bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('purchase-btn').addEventListener('click', function() {
+            const mailtoUrl = 'mailto:mosasabasaba@soundandcolor.dev?subject=I%20want%20to%20buy%20ScholarFlux%20(Sales%20Edition)&body=Hi%20ScholarFlux%20Team,%0A%0AI\'m%20ready%20to%20buy%20ScholarFlux%20for%20Sales.%20Please%20send%20me%20payment%20instructions.%0A%0AThanks!';
+            
+            const newWindow = window.open(mailtoUrl, '_blank');
+            
+            // If popup blocked, fall back to same window
+            if (!newWindow || newWindow.closed || typeof newWindow.closed === 'undefined') {
+                window.location.href = mailtoUrl;
+            }
+        });
+    </script>
 </body>
 </html>
